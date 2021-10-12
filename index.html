@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./all.min.css" />
+  </head>
+  <body>
+    <nav>
+      <h2 id="logo">My Portfolio</h2>
+      <ul class="navigation-items">
+        <li class="navigation-item"><a href="#about-me">About Me</a></li>
+        <li class="navigation-item"><a href="#projects">Projects</a></li>
+        <li class="navigation-item"><a href="#skills">Skills</a></li>
+        <li class="navigation-item"><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about-me">
+        <div class="about-me-container">
+          <div class="about-me-text-container">
+            <h2>About Me</h2>
+            <p>
+              Hi! I'm Asma Zeeshan and I'm doing "Full-Stack Engineer Coding". I'm an ambitious, hardworking individual, performing well under pressure and accept the challenges to give my best.  .
+            </p>
+            <p>
+             I can Creat responsive Websites, Using different Front-end language and back-end programming.To work in a challenging and growth-oriented position to give the better results of my knowledge and experience and to contribute to a stimulating environment. I am very confident about my skills and honest with my work. I am a quick learner and always try to give my best.
+            </p>
+            <p>
+            I'm IT graduate and love to explore modren websites.I like to watch documentary movie and reading sometimes. I like to go to gym to get myself fit n try to learn different exercises as well. 
+            </p>
+            <p>
+              Fun fact! I've been programing for
+              <span id="time-container">0</span> seconds!
+            </p>
+          </div>
+          <img
+            src="profile-pic.jpg"
+            alt="A photo of Asma Zeeshan"
+            class="portrait"
+          />
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <details class="project">
+          <summary class="project-title">
+            <h3>My First website</h3>
+          </summary>
+          <img
+            src="website-design.jpg"
+            alt="my-website"
+            class="project-image"
+          />
+          <p class="project-description">
+            My Degree in IT
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>My Degree</h3>
+          </summary>
+          <img
+            src="Punjab_degree.jpg"
+            alt="degree"
+            class="project-image"
+          />
+          <p class="project-description">
+            I helped Charles Babbage on topics ranging from math to computation
+            that helped the development of the Analytical Engine.
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>My certificates</h3>
+          </summary>
+          <img
+            src="java-certificate.jpg"
+            alt="java-language"
+            class="project-image"
+          />
+            <img src="jquery-certificate.jpg" alt="jquery" class="project-image">
+             <img src="python3-certificate.jpg" alt="python3" class="project-image">
+          <p class="project-description">
+            I am learning full-stake Engineer AND different back-end languages like Java, php, python 3, C# as well.
+          </p>
+        </details>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div id="skills-container">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-react"></i>
+          <i class="fab fa-aws"></i>
+          <i class="fab fa-sketch"></i>
+          <i class="fab fa-figma"></i>
+          <i class="fab fa-git"></i>
+          <i class="fab fa-chrome"></i>
+          <i class="fas fa-terminal"></i>
+          <i class="fas fa-universal-access"></i>
+          <i class="fab fa-npm"></i>
+          <i class="fab fa-node"></i>
+          <i class="fab fa-github"></i>
+        </div>
+      </section>
+    </main>
+
+    <footer>Made with <span class="heart">♥</span> in London</footer>
+  </body>
+  <script>
+    const timeContainer = document.getElementById("time-container");
+    const BIRTH_DAY = "12-10-1815";
+    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+      );
+
+      timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+  </script>
+</html>
